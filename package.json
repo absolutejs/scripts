@@ -2,6 +2,7 @@
 	"name": "@absolutejs/scripts",
 	"version": "0.0.1",
 	"scripts": {
+		"config": "absolute config",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"format": "prettier --write \"./**/*.{js,jsx,ts,tsx,css,json,md,mjs}\"",
 		"dev": "bun run --watch src/backend/server.ts",
