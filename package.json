@@ -1,6 +1,7 @@
 {
 	"name": "@absolutejs/scripts",
 	"version": "0.0.1",
+  "license": "BSL-1.1",
 	"scripts": {
 		"config": "absolute config",
 		"test": "echo \"Error: no test specified\" && exit 1",
