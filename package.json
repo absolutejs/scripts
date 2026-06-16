@@ -1,11 +1,13 @@
 {
 	"name": "@absolutejs/scripts",
 	"version": "0.0.1",
+	"private": true,
+	"description": "Internal AbsoluteJS scripts and dev utilities (e.g. Drizzle schema → DBML generation). Not a published package.",
 	"homepage": "https://github.com/absolutejs/scripts",
 	"bugs": {
 		"url": "https://github.com/absolutejs/scripts/issues"
 	},
-  "license": "BSL-1.1",
+	"license": "BSL-1.1",
 	"scripts": {
 		"config": "absolute config",
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -43,6 +45,5 @@
 		"eslint-plugin-security": "3.0.1",
 		"prettier": "3.5.3",
 		"typescript-eslint": "8.32.0"
-	},
-	"module": "src/backend/server.ts"
+	}
 }
