@@ -1,6 +1,10 @@
 {
 	"name": "@absolutejs/scripts",
 	"version": "0.0.1",
+	"homepage": "https://github.com/absolutejs/scripts",
+	"bugs": {
+		"url": "https://github.com/absolutejs/scripts/issues"
+	},
   "license": "BSL-1.1",
 	"scripts": {
 		"config": "absolute config",
