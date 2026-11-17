@@ -66,7 +66,15 @@ jobs:
           done
           if [ -s plan.tsv ]; then echo pending=true >> "$GITHUB_OUTPUT"; else echo pending=false >> "$GITHUB_OUTPUT"; fi
       - if: steps.plan.outputs.pending == 'true'
-        run: bun install --frozen-lockfile
+        name: Install pending package dependencies
+        run: |
+          if [ -f package.json ]; then
+            bun install --frozen-lockfile
+          else
+            while IFS="$(printf '\t')" read -r dir name version tag; do
+              (cd "$dir" && bun install --frozen-lockfile)
+            done < plan.tsv
+          fi
       - if: steps.plan.outputs.pending == 'true'
         name: Build, check and pack
         run: |
